@@ -1,5 +1,5 @@
 // Singleton zarządzający cytatami
-object QuoteManager {
+object QuoteManager1 {
     private val quotesList = mutableListOf(
         "Sigma boy is sigma boy",
         "Mam na imie Marek jestem programista",
@@ -23,19 +23,19 @@ object QuoteManager {
 
 fun main() {
     while (true) {
-        println("Wybierz opcję:")
-        println("1. Wyświetl losowy cytat")
-        println("2. Dodaj nowy cytat")
-        println("3. Zakończ")
+        println("Wybierz opcję:" )
+        println("1. Wyświetl losowy cytat" )
+        println("2. Dodaj nowy cytat" )
+        println("3. Zakończ" )
 
 
         when (readLine()?.toIntOrNull()) {
-            1 -> println("Losowy cytat: ${QuoteManager.getRandomQuote()}")
+            1 -> println("Losowy cytat: ${QuoteManager1.getRandomQuote()}")
             2 -> {
                 println("Podaj nowy cytat:")
                 val newQuote = readLine()
                 if (!newQuote.isNullOrBlank()) {
-                    QuoteManager.addQuote(newQuote)
+                    QuoteManager1.addQuote(newQuote)
                     println("Dodano nowy cytat")
                 } else {
                     println("Cytat nie może być pusty")
